@@ -15,11 +15,11 @@ public class WebController {
 	@GetMapping("projects/qr")
 	public String qrPage(Model model){
 		model.addAttribute("qr", new Form());
-		return "page/qr";
+		return "projects/qr";
 	}
 
 	@PostMapping("projects/qr")
 	public String submitQrPage(@ModelAttribute Form form){
-		return "page/result";
+		return "projects/result";
 	}
 }
