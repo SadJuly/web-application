@@ -31,7 +31,7 @@ public class WebController {
 		GenerateQRCode qr = new GenerateQRCode();
 		
     	InputStream in = getClass()	
-    		.getResourceAsStream(qr.generate(form.getContent()););
+    		.getResourceAsStream(qr.generate(form.getContent()));
     return IOUtils.toByteArray(in);
 }
 }
