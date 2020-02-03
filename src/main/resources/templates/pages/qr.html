@@ -15,10 +15,10 @@
     
     <div class="row h-100 justify-content-center align-items-center m-0">
         
-        <div class="text-center">
+        <div class="text-center animated fadeInDown">
             <form action="#" th:action="@{/qr}" th:object="${qr}" method="POST">
                 <div class="form-group">
-                    <label for="basic-url"><h1>Your URL</h1></label>
+                    <label for="basic-url mb-8"><h1>Your URL</h1></label>
                   <div class="input-group ">
                     <input id="qr-text" th:field="*{content}" name="qr-text" placeholder="https://example.com" type="text" class="form-control-lg" required="required"> 
                   </div>
