@@ -66,7 +66,7 @@ public class GenerateQRCode {
                 }
             }
         }
-        ImageIO.write(image, fileType, qrFile);
+        ImageIO.read(image);
     }
 
 }

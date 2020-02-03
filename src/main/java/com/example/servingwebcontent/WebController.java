@@ -20,8 +20,18 @@ public class WebController {
 
 	@PostMapping("/qr")
 	public String submitQrPage(@ModelAttribute Form form){
-		GenerateQRCode qr = new GenerateQRCode();
-		qr.generate(form.getContent());
 		return "result";
 	}
+
+	@GetMapping(
+		value = "/result",
+		produces = MediaType.APPLICATION_OCTET_STREAM_VALUE
+	)
+	public @ResponseBody byte[] getFile() throws IOException {
+		GenerateQRCode qr = new GenerateQRCode();
+		
+    	InputStream in = getClass()	
+    		.getResourceAsStream(qr.generate(form.getContent()););
+    return IOUtils.toByteArray(in);
+}
 }
