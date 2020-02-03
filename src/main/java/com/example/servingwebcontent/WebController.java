@@ -14,7 +14,6 @@ public class WebController {
 
 	@GetMapping("/qr")
 	public String qrPage(Model model){
-		model.addAttribute("qr", new Form());
 		return "qr";
 	}
 }
