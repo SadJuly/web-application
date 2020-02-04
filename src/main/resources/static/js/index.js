@@ -1,6 +1,3 @@
-// Animations init
-new WOW().init();
-
 var data = null;
 
         var xhr = new XMLHttpRequest();
