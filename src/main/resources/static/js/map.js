@@ -5,13 +5,25 @@ var mymap = L.map('leaflet-map-main', {
     //... other options
 }).setView([-1.405, 20.09], 2);
 
-mymap.setMaxBounds(mymap.getBounds());
+let limitBounds = {
+    southWest: {
+        lat: -84.26717240431665,
+        lng: -197.92968750000003
+    },
+
+    northWest: {
+        lat: 84.01602206865661,
+        lng: 237.65625000000003
+    }
+}
+
+mymap.setMaxBounds(limitBounds);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + token, {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     minZoom: 2,
-    id: 'mapbox/light-v10', //dark-v10
+    id: 'mapbox/dark-v10',
     accessToken: token
 }).addTo(mymap);
 
