@@ -5,46 +5,14 @@ header,
   height: 100% !important;
 }
 
-@media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 1000px !important;
-  }
-}
-@media (min-width: 800px) and (max-width: 850px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 600px !important;
-  }
-}
-
-
 li.nav-item {
     margin: 1rem ;
     border: solid gainsboro 1px ;
     border-radius: 2rem ;
     padding: 0vh 2vh ;
 }
-
-.bg { 
-    /* The image used */
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(4).jpg") !important;
-  
-    /* Full height */
-    height: 100% ; 
-  
-    /* Center and scale the image nicely */
-    background-position: center ;
-    background-repeat: no-repeat ;
-    background-size: cover ;
-  }
-
   .invert {
-    filter: invert(100%); 
+    filter: invert(100%) !important; 
   }
 
   nav {
