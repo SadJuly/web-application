@@ -18,7 +18,7 @@ public class WebController {
 	}
 
 	@GetMapping("/projects/map")
-	public String qrPage(Model model){
+	public String mapPage(Model model){
 		return "/projects/map";
 	}
 }
