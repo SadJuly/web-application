@@ -23,14 +23,5 @@ li.nav-item {
   text-align: center !important;
   min-width: -webkit-fill-available !important;
   border: none !important;
-  border-radius: 1rem !important;
+  border-radius: 0.25rem !important;
 }
-
-/* a.dropdown-item {
-  color: white;
-  font-weight: 300;
-}
-
-a.dropdown-item:hover {
-  background-color: transparent;
-} */
