@@ -9,9 +9,23 @@ nav.navbar {
   background-color: #00000029;
 }
 
-body {
-  background: darkgrey;
+li.nav-item {
+  margin: 1rem ;
+  border: solid gainsboro 1px ;
+  border-radius: 2rem ;
+  padding: 0vh 2vh ;
 }
+.invert {
+  filter: invert(100%) !important; 
+}
+
+.dropdown-menu.show {
+text-align: center !important;
+min-width: -webkit-fill-available !important;
+border: none !important;
+border-radius: 0.25rem !important;
+}
+
 div#content {
   display:flex;
   flex-direction: row;
