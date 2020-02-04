@@ -3,22 +3,19 @@
     margin: 0;
 }
 
-nav.navbar {
-  height: 5rem !important;
-  font-size: 20px;
-  background-color: #00000029;
-}
-
 li.nav-item {
   margin: 1rem ;
   border: solid gainsboro 1px ;
   border-radius: 2rem ;
   padding: 0vh 2vh ;
   text-align: center;
-  background-color: #808080a1;
 }
 .invert {
   filter: invert(100%) !important; 
+}
+
+nav {
+  background-color: #00000038 !important;
 }
 
 .dropdown-menu.show {
