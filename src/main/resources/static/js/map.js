@@ -5,17 +5,15 @@ var mymap = L.map('leaflet-map-main', {
     //... other options
 }).setView([-1.405, 20.09], 2);
 
-let limitBounds = {
-    southWest: {
-        lat: -84.26717240431665,
-        lng: -197.92968750000003
-    },
-
-    northWest: {
-        lat: 84.01602206865661,
-        lng: 237.65625000000003
-    }
-}
+let southWest = L.latLng(
+    -84.26717240431665,
+    -197.92968750000003
+),
+northEast = L.latLng(
+    84.01602206865661,
+    237.65625000000003
+),
+limitBounds = L.latLngBounds(southWest, northEast)
 
 mymap.setMaxBounds(limitBounds);
 
