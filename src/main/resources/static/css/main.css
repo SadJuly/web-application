@@ -1,6 +1,25 @@
 html,
-body {
+body,
+header,
+.view {
   height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
 }
 
 
@@ -23,3 +42,24 @@ li.nav-item {
     background-repeat: no-repeat ;
     background-size: cover ;
   }
+
+  .invert { filter: invert(100%); }
+
+  nav{
+    background-color: #00000038 !important;
+}
+
+.dropdown-menu.show {
+  background-color: #f0f8ff63;
+  text-align: center;
+  min-width: -webkit-fill-available;
+  border: none;
+  border-radius: 1rem;
+}
+
+a.dropdown-item {
+  color: white;
+  font-weight: 300;
+}
+
+a.dropdown-item:hover {background-color: transparent;}
