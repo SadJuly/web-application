@@ -27,7 +27,7 @@ div#leaflet-map-main {
 }
 
 .leaflet-top {
-  top: 10%;
+  top: 10% !important;
 }
 
 /* width */
