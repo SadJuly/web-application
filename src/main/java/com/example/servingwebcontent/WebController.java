@@ -21,4 +21,9 @@ public class WebController {
 	public String mapPage(Model model){
 		return "map";
 	}
+
+	@GetMapping("/")
+	public String homePage(Model model){
+		return "index";
+	}
 }
