@@ -51,12 +51,12 @@ li.nav-item {
     background-color: #00000038 !important;
 }
 
-.dropdown-menu.show {
+/* .dropdown-menu.show {
   text-align: center !important;
   min-width: -webkit-fill-available !important;
   border: none !important;
   border-radius: 1rem !important;
-}
+} */
 
 /* a.dropdown-item {
   color: white;
