@@ -43,6 +43,16 @@ div#leaflet-map-main {
   top: 10% !important;
 }
 
+.info-stats {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  left: 5%;
+  bottom: 5%;
+  color: white;
+  font-weight: 800;
+  font-size: small;
+
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
