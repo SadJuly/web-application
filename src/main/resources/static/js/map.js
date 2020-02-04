@@ -62,5 +62,5 @@ $.ajax(settings).done(function (response) {
     // countries = [...new Set(countries)]
     
         const loader = document.querySelector(".loader");
-        loader.classList.add("animated fadeOut")
+        loader.className += " animated fadeOut"
 });
