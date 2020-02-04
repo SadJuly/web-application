@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar {
+  height: 5rem !important;
+  font-size: 20px;
+  background-color: #00000029;
+}
+
+body {
+  background: darkgrey;
+}
+div#content {
+  display:flex;
+  flex-direction: row;
+}
+
+div#map {
+  height: 100vh;
+  width: 100%;
+}
+div#leaflet-map-main {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-top {
+  top: 10%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+  }
+
+
+ 
