@@ -48,40 +48,20 @@ var settings = {
         
         // countries.push(country)
         
-
-        // objArray.push({
-        //     place: e.properties.place,
-        //     mag: e.properties.mag,
-        //     time: e.properties.time,
-        //     type: e.properties.type,                
-        //     coordinates: e.geometry.coordinates
-        // })
         
-        //Add event circle
         L.circle([e.geometry.coordinates[0], e.geometry.coordinates[1]], 
             {
                 radius: 80000, 
                 color: '#ff0000b5',
                 stroke: false
-            }).addTo(mymap);
+            }
+        ).addTo(mymap);
 
     });
     
     // countries = [...new Set(countries)]
     
-    // countries.forEach(c => {        
-    //     let setCountry = document.createElement('div');            
-    //     setCountry.className = 'country-elem'  
-        
-    //     let countryFlag = document.createElement('img')
-    //     countryFlag.className = 'country-flag'
-    //     setCountry.append(countryFlag)
-
-    //     let cName = document.createElement('p')
-    //     cName.innerText = c;
-    //     cName.className = 'country-name'
-    //     setCountry.append(cName)
-    //     dataList.append(setCountry)
-    // })
-
+        const loader = document.querySelector(".loader");
+        loader.classList.add("animated fadeOut")
+    });
 });
