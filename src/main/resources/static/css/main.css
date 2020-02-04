@@ -2,7 +2,7 @@ html,
 body,
 header,
 .view {
-  height: 100%;
+  height: 100% !important;
 }
 
 @media (max-width: 740px) {
@@ -10,7 +10,7 @@ header,
   body,
   header,
   .view {
-    height: 1000px;
+    height: 1000px !important;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
@@ -18,7 +18,7 @@ header,
   body,
   header,
   .view {
-    height: 600px;
+    height: 600px !important;
   }
 }
 
