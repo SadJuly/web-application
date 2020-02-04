@@ -26,15 +26,15 @@ let currentDate = date.getFullYear()+"-"+date.getMonth()+"-"+date.getDay();
 
 let dataList = document.getElementById('country-list');
 
-var settings = {
-    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2017-01-01&endtime="+ currentDate +"&minmagnitude=5&maxlongitude=80.000&minlongitude=-80.000",
-    "method": "GET",
-    "timeout": 0,
-  };
+    var settings = {
+        "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2017-01-01&endtime="+ currentDate +"&minmagnitude=5&maxlongitude=80.000&minlongitude=-80.000",
+        "method": "GET",
+        "timeout": 0,
+    };
   
   let countries = []
 
-  $.ajax(settings).done(function (response) {
+$.ajax(settings).done(function (response) {
 
     response.features.forEach(e => {
         // let getCountry;
@@ -63,5 +63,4 @@ var settings = {
     
         const loader = document.querySelector(".loader");
         loader.classList.add("animated fadeOut")
-    });
 });
