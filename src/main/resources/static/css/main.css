@@ -43,23 +43,26 @@ li.nav-item {
     background-size: cover ;
   }
 
-  .invert { filter: invert(100%); }
+  .invert {
+    filter: invert(100%); 
+  }
 
-  nav{
+  nav {
     background-color: #00000038 !important;
 }
 
 .dropdown-menu.show {
-  background-color: #f0f8ff63;
-  text-align: center;
-  min-width: -webkit-fill-available;
-  border: none;
-  border-radius: 1rem;
+  text-align: center !important;
+  min-width: -webkit-fill-available !important;
+  border: none !important;
+  border-radius: 1rem !important;
 }
 
-a.dropdown-item {
+/* a.dropdown-item {
   color: white;
   font-weight: 300;
 }
 
-a.dropdown-item:hover {background-color: transparent;}
+a.dropdown-item:hover {
+  background-color: transparent;
+} */
