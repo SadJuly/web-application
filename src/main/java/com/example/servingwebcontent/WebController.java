@@ -14,11 +14,11 @@ public class WebController {
 
 	@GetMapping("/projects/qr")
 	public String qrPage(Model model){
-		return "/projects/qr";
+		return "qr";
 	}
 
 	@GetMapping("/projects/map")
 	public String mapPage(Model model){
-		return "/projects/map";
+		return "map";
 	}
 }
