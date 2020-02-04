@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class WebController {
 
-	@GetMapping("/qr")
+	@GetMapping("/projects/qr")
 	public String qrPage(Model model){
-		return "qr";
+		return "/projects/qr";
+	}
+
+	@GetMapping("/projects/map")
+	public String qrPage(Model model){
+		return "/projects/map";
 	}
 }
