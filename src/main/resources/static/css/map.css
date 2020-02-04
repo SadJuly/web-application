@@ -14,6 +14,8 @@ li.nav-item {
   border: solid gainsboro 1px ;
   border-radius: 2rem ;
   padding: 0vh 2vh ;
+  text-align: center;
+  background-color: #808080a1;
 }
 .invert {
   filter: invert(100%) !important; 
