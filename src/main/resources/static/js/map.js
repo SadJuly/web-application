@@ -62,7 +62,7 @@ $.ajax(settings).done(function (response) {
     // countries = [...new Set(countries)]
     
         const loader = document.querySelector(".loader");
-        loader.className += " animated fadeOut slow"
+        loader.className += " animated fadeOut"
         setTimeout(() => {
             loader.style.display = "none"
         }, 1500)
