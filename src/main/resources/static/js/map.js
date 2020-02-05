@@ -29,8 +29,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 L.control.zoom({
      position:'topright'
 }).addTo(mymap);
-let startDate = new Date("2016").toLocaleDateString().split(".").reverse().join("-")
-let currentDate = new Date().toLocaleDateString().split(".").reverse().join("-")
+
+let startDate = new Date(`${new Date().getFullYear() -1}`)
+    .toLocaleDateString()
+    .split(".")
+    .reverse()
+    .join("-")
+
+let currentDate = new Date()
+    .toLocaleDateString()
+    .split(".")
+    .reverse()
+    .join("-")
 
 
 let dataList = document.getElementById('country-list');
