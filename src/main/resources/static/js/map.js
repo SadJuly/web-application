@@ -36,7 +36,7 @@ let currentDate = new Date().toLocaleDateString().split(".").reverse().join("-")
 let dataList = document.getElementById('country-list');
 
     var settings = {
-        "url": `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startDate}&endtime=${currentDate}&minmagnitude=5&maxlongitude=80.000&minlongitude=-80.000`,
+        "url": `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startDate}&endtime=${currentDate}&minmagnitude=5`,
         "method": "GET",
         "timeout": 0,
     };
@@ -45,7 +45,7 @@ let dataList = document.getElementById('country-list');
 
     let countries = []
     let infoContent = [
-        `from ${startDate} to ${currentDate}`,
+        `Updated from ${startDate} to ${currentDate}`,
         "",
         ""
     ]
@@ -67,7 +67,7 @@ $.ajax(settings).done(function (response) {
         
         // infoContent[1]
 
-        L.circle([e.geometry.coordinates[0], e.geometry.coordinates[1]], 
+        L.circle([e.geometry.coordinates[1], e.geometry.coordinates[0]], 
             {
                 radius: 80000, 
                 color: '#ff0000b5',

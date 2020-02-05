@@ -57,28 +57,35 @@ div#leaflet-map-main {
   
 }
 
+#leaflet-map-main > div.leaflet-control-container > div.leaflet-bottom.leaflet-right > div {
+  background-color: transparent;
+  color: white;
+}
+
 .info-stats {
   position: absolute;
   z-index: 1000;
   pointer-events: none;
-  bottom: 5%;
+  bottom: 0;
   color: #b9b9b9;
   font-weight: 800;
   font-size: small;
   right: 0;
-  background-color: #0000004d;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  width: 40vh;
+  width: 100%;
 }
 
 .info-stats div {
-  margin-left: 4rem;
+  display: flex;
+  justify-content: center;
+  background-color: #0000004d;
 }
 
-.info-stats p{
-  margin: 2vh;
+
+  .info-stats p {
+    margin: 2px;
+    margin-left: 1rem;
 }
+
 
 /* width */
 ::-webkit-scrollbar {
