@@ -29,23 +29,30 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 L.control.zoom({
      position:'topright'
 }).addTo(mymap);
+let startDate = new Date("2016").toLocaleDateString().split(".").reverse().join("-")
+let currentDate = new Date().toLocaleDateString().split(".").reverse().join("-")
 
-let objArray = [];
-let date = new Date();
-let currentDate = date.getFullYear()+"-"+date.getMonth()+"-"+date.getDay();
 
 let dataList = document.getElementById('country-list');
 
     var settings = {
-        "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2017-01-01&endtime="+ currentDate +"&minmagnitude=5&maxlongitude=80.000&minlongitude=-80.000",
+        "url": `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startDate}&endtime=${currentDate}&minmagnitude=5&maxlongitude=80.000&minlongitude=-80.000`,
         "method": "GET",
         "timeout": 0,
     };
-  
-  let countries = []
+    
+    //new Date("2016").toLocaleDateString().replace(".", "-").
 
+    let countries = []
+    let infoContent = [
+        `from ${startDate} to ${currentDate}`,
+        "",
+        ""
+    ]
 $.ajax(settings).done(function (response) {
 
+    infoContent[1] += response.metadata.count;
+    // infoContent[2] 
     response.features.forEach(e => {
         // let getCountry;
         // let country;
@@ -58,7 +65,8 @@ $.ajax(settings).done(function (response) {
         
         // countries.push(country)
         
-        
+        // infoContent[1]
+
         L.circle([e.geometry.coordinates[0], e.geometry.coordinates[1]], 
             {
                 radius: 80000, 
@@ -70,11 +78,22 @@ $.ajax(settings).done(function (response) {
     });
     
     // countries = [...new Set(countries)]
-    
+    let iter = 0;
+    document
+    .getElementsByClassName("info-stats")[0]
+    .firstElementChild
+    .childNodes
+    .forEach(node => {
+        if(node.nodeType == Node.ELEMENT_NODE){
+            node.textContent += infoContent[iter]
+            iter++;
+        }   
+    })
+
         const loader = document.querySelector(".loader");
         loader.className += " animated fadeOut"
         setTimeout(() => {
             loader.style.display = "none"
-        }, 1500)
+        }, 1000)
         
 });

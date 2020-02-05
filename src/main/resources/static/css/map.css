@@ -53,24 +53,37 @@ div#leaflet-map-main {
 }
 
 .leaflet-top {
-  top: 10% !important;
+  top: 45% !important;
+  
 }
 
 .info-stats {
   position: absolute;
   z-index: 1000;
   pointer-events: none;
-  left: 5%;
   bottom: 5%;
-  color: white;
+  color: #b9b9b9;
   font-weight: 800;
   font-size: small;
+  right: 0;
+  background-color: #0000004d;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 40vh;
+}
+
+.info-stats div {
+  margin-left: 4rem;
+}
+
+.info-stats p{
+  margin: 2vh;
+}
 
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
   }
-  
   /* Track */
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px black; 
